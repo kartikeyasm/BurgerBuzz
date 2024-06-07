@@ -1,0 +1,506 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fe7d7d;
+}
+
+
+/*Navbar*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff33669d;
+    padding: 10px 20px;
+}
+.logo{
+    border-radius: 100%;
+    
+}
+
+.nav-buttons {
+    display: flex;
+}
+
+.nav-button {
+    background-color: #ff3366a5;
+    color: white;
+    border: solid #ff3366a5;
+    border-radius: 10%;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.nav-button:hover {
+    background-color: #FF3366;
+    border: solid wheat;
+}
+
+/*Popup*/
+
+.popUpForm-SignIn{
+    background-color: lightgray;
+    display: none;
+    margin-top: 200px;
+    z-index: 20;
+    position: absolute;
+    left: 35%;
+    top: 5%;
+    border: 1px solid #F1F1F1;
+    border-radius: 5px;
+    opacity: 1;
+    height: 400px;
+    width: 450px;
+    transition: opacity 0.3s ease;
+}
+.popUpForm-SignUp{
+    background-color: lightgray;
+    display: none;
+    margin-top: 200px;
+    z-index: 20;
+    position: absolute;
+    left: 35%;
+    top: 5%;
+    border: 1px solid #F1F1F1;
+    border-radius: 5px;
+    opacity: 1;
+    height: 620px;
+    width: 450px;
+    transition: opacity 0.3s ease;
+}
+
+.popUpFormContent{
+    padding-top: 31px;
+    padding-left: 32px;
+    padding-bottom: 25px;
+    padding-right: 32px;
+    transition: transform 0.3s ease;
+}
+
+.popUpHead{
+    font-size: 20px;;
+    font-family: aktiv-grotesk, sans-serif;
+   font-style: normal;
+    font-weight: 200;
+    width: 93px;
+    height: 26px;
+    text-align: left;
+    letter-spacing: 0.4px;
+    color: #2D3142;
+    opacity: 1;
+}
+
+.email{
+    margin-top: 32px;
+    font-size: 14px;
+    width: 386px;
+   height: 27px;
+    opacity: 1;
+    border: none;
+    border-bottom: 2px solid #6F718F99;
+    text-align: left;
+   letter-spacing: 0.4px;
+   color: black;
+}
+
+.names{
+    display: flex;
+    margin-top: 40px;
+    gap: 30px;
+}
+
+.fName{
+    font-size: 14px;
+    opacity: 1;
+    border: none;
+    border-bottom: 2px solid #6F718F99;
+    text-align: left;
+   letter-spacing: 0.4px;
+   color: black;
+   width: 178px;
+   height: 27px;
+}
+
+.sName{
+    font-size: 14px;
+    opacity: 1;
+    width: 178px;
+    height: 27px;
+    border: none;
+    border-bottom: 2px solid #6F718F99;
+    text-align: left;
+    letter-spacing: 0.4px;
+    color: black;
+}
+
+.checkArea{
+    margin-top: 40px;
+    display: flex;
+    gap: 10px;
+}
+
+.checkArea input{
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    position: relative;
+    border: 2px solid #FF3366;
+    border-radius: 3px;
+    opacity: 1;
+}
+
+
+.checkArea input:checked{
+    background-color: #FF3366;
+}
+
+.checkArea input:checked::before {
+    color: white;
+    content: '✔';
+    position: absolute;
+    font-size:12px;
+    font-weight: 600;
+    left:50%;
+    top:-3.5px;
+    transform: translateX(-50%)  translateY(10%);;
+}
+
+
+
+.checkContent{
+    width: 357px;
+    height: 39px;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #616678;
+    opacity: 0.9;
+}
+
+.popUpButton{
+    margin-top: 22px;
+    width: 386px;
+    height: 52px;
+    background: #FF3366 0% 0% no-repeat padding-box;
+    opacity: 1;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.Sign-Up{
+    margin-top: 22px;
+    width: 150px;
+    height: 52px;
+    background: #FF3366 0% 0% no-repeat padding-box;
+    opacity: 1;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.Log-In{
+    margin-top: 22px;
+    width: 150px;
+    height: 52px;
+    background: #FF3366 0% 0% no-repeat padding-box;
+    opacity: 1;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+
+
+/*SLIDER*/
+
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 400px;
+    overflow: hidden;
+    margin: auto;
+    border-top: 20px solid #f386a17a;
+    border-bottom: 20px solid #f386a17a;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+
+
+
+
+/*BANNER*/
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    background-image: url('img/NGG72VGV_output_0.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+}
+
+.banner-content h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.banner-content p {
+    font-size: 24px;
+    margin: 10px 0 0;
+}
+
+
+
+
+
+/*WORKING AREA*/
+
+.outter{
+    height: 280px;
+    width: 100rem;
+    margin: 10px 0px;
+
+    display: flex;
+    position: relative;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.inner{
+    height: 280px;
+    width: 15rem;
+}
+
+.pics{
+    margin-top: 36px;
+    width: 15rem;
+    height: 180px;
+}
+
+.work{
+    margin: 0px;
+}
+
+.dine-in{
+    top:0px;
+    left: 220px;
+    position: absolute;
+
+    transition-duration: 1s;
+    transition-property: top;
+    transition-timing-function: ease;
+}
+
+.dine-in:hover{
+    top:37px;
+}
+.delivery{
+    top:0px;
+    left: 680px;
+    height: 500px;
+    position: absolute;
+    transition-duration: 1s;
+    transition-property: top;
+    transition-timing-function: ease;
+}
+.delivery:hover{
+    top:37px;
+}
+.take-away{
+    top:0px;
+    left: 1140px;
+    position: absolute;
+    transition-duration: 1s;
+    transition-property: top;
+    transition-timing-function: ease;
+}
+.take-away:hover{
+    top:37px;
+}
+.work-btn{
+    height: 50px;
+    width: 15rem;
+    margin: 0;
+    background-color: #FF3366;
+}
+
+
+/*Reviews*/
+
+.reviews{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+}
+
+
+/*PostCards*/
+
+
+.postcard-container {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1000px;
+}
+
+.postcard {
+    width: calc(33.333% - 20px);
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.postcard-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-info h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.user-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #888;
+}
+
+.post-image {
+    width: 100%;
+    height: auto;
+}
+
+.postcard-body {
+    padding: 10px;
+}
+
+.post-text {
+    font-size: 16px;
+    margin: 0;
+}
+
+
+/*Footer*/
+
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    margin-top: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    margin-top: 0;
+}
+
+.back-to-top-btn {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    padding: 10px 20px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back-to-top-btn:hover {
+    background-color: #777;
+}
+
+.newsletter-btn {
+    padding: 10px 20px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.newsletter-btn:hover {
+    background-color: #777;
+}
